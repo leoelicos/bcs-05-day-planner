@@ -1,0 +1,64 @@
+@media screen and (max-width: 576px) {
+	article {
+		width: 95vw;
+	}
+}
+
+@media screen and (min-width: 576px) {
+	article {
+		width: 90vw;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	article {
+		width: 85vw;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	article {
+		width: 80vw;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	header {
+		padding: 0 5vw;
+	}
+	article {
+		width: 75vw;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	header {
+		padding: 0 15vw;
+	}
+	article {
+		width: 70vw;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		width: 100vw;
+	}
+	header-date {
+		flex: 1;
+	}
+
+	header .clock {
+		display: none;
+	}
+	header #location,
+	header #weather-temperature {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	header #weather-description {
+		display: none;
+	}
+}

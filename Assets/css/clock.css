@@ -1,0 +1,92 @@
+/* to wrap around the clock elements */
+.clock-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 0 1vmin;
+}
+
+.clock {
+	position: relative;
+	width: 14vh;
+	height: 14vh;
+	/* border: 1px dashed rgba(255,255,255,50%); */
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 20%);
+}
+
+.needle {
+	background-color: var(--primary-color);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1vmin;
+	border-radius: 50%;
+	transform-origin: bottom center;
+}
+
+.needle.clock-hour {
+	background-color: white;
+	height: 3vmin;
+	transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle.minute {
+	background-color: black;
+	height: 4vmin;
+	transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle.second {
+	height: 5vmin;
+	transform: translate(-50%, -100%) rotate(0deg);
+	background-color: hsl(6, 79%, 57%);
+}
+
+.center-point {
+	background-color: hsl(6, 79%, 57%);
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%; /* this will make it a circle */
+}
+
+.center-point::after {
+	content: '';
+	background-color: var(--primary-color);
+	width: 5px;
+	height: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%; /* this will make it a circle */
+}
+
+.time {
+	margin-left: 0.5vw;
+	font-size: calc(16px + 2vmin);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.date {
+	color: hsl(0, 0%, 67%);
+	font-size: 14px;
+	letter-spacing: 0.3px;
+	text-transform: uppercase;
+}
+
+.date .circle {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border-radius: 50%;
+	height: 18px;
+	width: 18px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 18px;
+	font-size: 12px;
+}

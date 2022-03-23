@@ -1,0 +1,18 @@
+/* Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
+[data-description='Saved!']:hover::after {
+	/*span[data-descr]:focus::after {*/
+	content: attr(data-description);
+	position: absolute;
+	left: -100%;
+	bottom: 50%;
+	transform: translate(-50%, 50%);
+	background-color: var(--secondary-color);
+	padding: 1vmin;
+	color: var(--primary-color);
+	font-size: 2vmin;
+	z-index: 1;
+	font-size: 1.5vmin;
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 0.3vmin;
+	line-height: 1.5;
+}

@@ -1,0 +1,48 @@
+:root {
+	--primary-color: #b97cfc;
+	--secondary-color: hsl(0, 0%, 100%);
+	--tertiary-color: rgb(42, 0, 51);
+}
+
+html {
+	transition: background-color 0.5s ease-in; /* so when the background color changes, it will fade in */
+}
+
+html.dark {
+	transition: background-color 0.5s ease-in; /* so when the background color changes, it will fade in */
+	--primary-color: #000000;
+	--secondary-color: #ffffff;
+	--tertiary-color: rgba(255, 255, 255, 0.3);
+}
+
+html.dark {
+	background-color: #111;
+	color: var(--primary-color);
+}
+main {
+	transition: background-color 0.5s ease-in; /* so when the background color changes, it will fade in */
+	background-color: var(--tertiary-color);
+	color: var(--primary-color);
+}
+main.dark {
+	transition: background-color 0.5s ease-in; /* so when the background color changes, it will fade in */
+	background-color: var(--tertiary-color);
+	color: var(--primary-color);
+}
+
+.toggle {
+	/* toggle dark mode button */
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border: 0;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.toggle:focus {
+	outline: none;
+}
+
+.bulb {
+	font-size: 4vh;
+}
