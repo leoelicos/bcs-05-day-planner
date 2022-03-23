@@ -16,7 +16,7 @@ Deployed: [Work Day Scheduler](https://leoelicos.github.io/bcs-05-day-planner/).
 
 ### Splash Page
 
-![Screenshot of Page: Splash](./Assets/images/deployed.jpg)
+![Screenshot of Page: Splash](./Screenshots/deployed.jpg)
 
 ## Credits
 
