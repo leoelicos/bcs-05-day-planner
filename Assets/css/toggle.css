@@ -24,12 +24,12 @@ html.dark {
 	--primary-color: #69468f;
 	--secondary-color: #ffffff;
 	--tertiary-color: #38254d;
-	--past: #c2b069;
-	--past-text: #000000;
+	--past: #836d38;
+	--past-text: #ffffff;
 	--present: #8f5fc2;
 	--present-text: #fff;
-	--future: #588f3f;
-	--future-text: #000000;
+	--future: #4b7b35;
+	--future-text: #fff;
 	--clock-hour-hand: var(--secondary-color);
 	--clock-minute-hand: var(--secondary-color);
 	--clock-second-hand: red;
