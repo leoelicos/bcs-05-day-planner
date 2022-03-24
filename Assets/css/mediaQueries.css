@@ -50,15 +50,24 @@
 
 	header .clock {
 		display: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 	}
 	header #location,
 	header #weather-temperature {
 		display: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 	}
 }
 
 @media screen and (max-width: 576px) {
 	header #weather-description {
 		display: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 	}
 }
