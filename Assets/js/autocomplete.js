@@ -3,8 +3,14 @@ var duties = ['access information ', 'adjust ', 'allocate ', 'allowance ', 'asse
 // Autocomplete widget
 $(function () {
 	for (var i = startDay; i <= finishDay; i++) {
-		$(`#hour${i}`).children().eq(1).autocomplete({
-			source: duties,
-		});
+		$(`#hour${i}`)
+			.children()
+			.eq(1)
+			.autocomplete({
+				source: duties,
+				position: {
+					collision: 'flip', // if the autocomplete is too low, it will flip to be above
+				},
+			});
 	}
 });
