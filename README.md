@@ -25,11 +25,11 @@ Deployed: [Work Day Scheduler](https://leoelicos.github.io/bcs-05-day-planner/).
 
 ### Light Mode
 
-![Screenshot of Page: Splash](./Screenshots/light.jpg)
+![Screenshot of Page: Splash](./Screenshots/light.png)
 
 ### Dark Mode
 
-![Screenshot of Page: Splash](./Screenshots/dark.jpg)
+![Screenshot of Page: Splash](./Screenshots/dark.png)
 
 ## Credits
 
