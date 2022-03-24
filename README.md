@@ -24,13 +24,21 @@ Deployed: [Work Day Scheduler](https://leoelicos.github.io/bcs-05-day-planner/).
 
 ## Screenshots
 
-### Light Mode
+### Light Mode, with Autocomplete UI
 
-![Screenshot of Page: Splash](./Screenshots/light.jpg)
+![Screenshot of Page: Light Mode](./Screenshots/light.jpg)
 
 ### Dark Mode
 
-![Screenshot of Page: Splash](./Screenshots/dark.png)
+![Screenshot of Page: Dark Mode](./Screenshots/dark.png)
+
+### Wide Mode
+
+![Screenshot of Page: Wide Mode](./Screenshots/wide.jpg)
+
+### Narrow Mode
+
+![Screenshot of Page: Narrow Mode](./Screenshots/narrow.jpg)
 
 ## Credits
 

@@ -3,13 +3,14 @@
 	margin: 0;
 }
 #weather-temperature {
-	font-size: 1.5vmin;
+	font-size: calc(5px + 1vmin);
 	font-weight: bold;
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 0.5vmin;
 }
 
 #weather-description {
+	font-size: calc(5px + 1vmin);
 	white-space: wrap;
 }
 
@@ -22,4 +23,11 @@
 	font-size: calc(5px + 1vmin);
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
+}
+
+.location {
+	font-size: calc(5px + 1vmin);
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 0.3vmin;
+	line-height: 1.5;
 }

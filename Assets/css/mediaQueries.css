@@ -17,26 +17,43 @@
 }
 
 @media screen and (min-width: 992px) {
-	article {
-		width: 80vw;
+	body {
+		flex-direction: row;
+		align-items: stretch;
 	}
-}
-
-@media screen and (min-width: 1200px) {
 	header {
-		padding: 0 5vw;
+		flex-direction: column;
+		width: 20vw;
+		height: 100vh;
 	}
-	article {
+	.header-date {
+		flex-direction: column;
+	}
+	.clock-container {
+		flex-direction: column;
+	}
+	.currentMonthAndYear {
+		flex-wrap: wrap;
+	}
+	main {
+		height: 100vh;
 		width: 75vw;
-	}
-}
-
-@media screen and (min-width: 1400px) {
-	header {
-		padding: 0 15vw;
+		justify-content: flex-start;
+		padding: 0 1vw;
+		flex-wrap: wrap;
 	}
 	article {
-		width: 70vw;
+		width: 30vw;
+		height: 12vh;
+		margin: 4vmin;
+	}
+	footer {
+		height: 100vh;
+		width: 5vw;
+	}
+
+	#weather-container {
+		flex-direction: column;
 	}
 }
 
