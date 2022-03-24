@@ -43,9 +43,9 @@
 		flex-wrap: wrap;
 	}
 	article {
-		width: 30vw;
+		width: 35vw;
 		height: 18vh;
-		margin: 1vmin;
+		margin: 1vh 1vw;
 	}
 	footer {
 		height: 100vh;
@@ -55,19 +55,26 @@
 	#weather-container {
 		flex-direction: column;
 	}
+
+	.timeblock-hour {
+		width: calc(5px + 3vw);
+	}
+	.timeblock-save {
+		width: calc(5px + 3vw);
+	}
+
+	.container {
+		justify-content: flex-start;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 	article {
 		width: 21vw;
 		height: 30vh;
-		margin: 1.5vh 1vw;
 	}
-	.timeblock-hour {
-		width: calc(5px + 3vw);
-	}
-	.timeblock-save {
-		width: calc(5px + 3vw);
+	.container {
+		justify-content: center;
 	}
 }
 
