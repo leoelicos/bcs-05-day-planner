@@ -1,5 +1,5 @@
 .ui-autocomplete {
-	max-height: 6vh;
+	max-height: 20vh;
 	overflow-y: auto;
 	/* prevent horizontal scrollbar */
 	overflow-x: hidden;
@@ -8,5 +8,5 @@
    * we use height instead, but this forces the menu to always be this tall
    */
 * html .ui-autocomplete {
-	height: 6vh;
+	height: 20vh;
 }
