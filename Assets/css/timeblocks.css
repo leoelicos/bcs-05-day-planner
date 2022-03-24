@@ -44,12 +44,19 @@
 	font-size: calc(16px + 2vmin);
 	width: calc(40px + 4vw);
 	position: relative;
+	cursor: pointer;
 }
-
+.timeblock-save:hover {
+	background-color: var(--present);
+	transition: all 0.3s linear;
+}
 .timeblock-save:hover i {
-	font-size: 4vmin;
 	color: var(--secondary-color);
-	transition: all 0.3s ease-in-out;
+	transition: all 0.3s linear;
+}
+.timeblock-save:active i {
+	transform: translateY(-1vmin);
+	transition: all 0.3s linear;
 }
 
 .past {
