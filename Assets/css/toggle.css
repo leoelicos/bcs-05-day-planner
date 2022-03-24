@@ -1,7 +1,17 @@
 :root {
-	--primary-color: #b97cfc;
+	--primary-color: #8f5fc2;
 	--secondary-color: hsl(0, 0%, 100%);
-	--tertiary-color: rgb(42, 0, 51);
+	--tertiary-color: rgb(252, 239, 255);
+	--past: #f5de84;
+	--past-text: #40453b;
+	--present: #b478f5;
+	--present-text: #ffffff;
+	--future: #77c255;
+	--future-text: #000000;
+	--clock-hour-hand: #8f5fc2;
+	--clock-minute-hand: #8f5fc2;
+	--clock-second-hand: red;
+	--clock-face: var(--secondary-color);
 }
 
 html {
@@ -10,24 +20,21 @@ html {
 
 html.dark {
 	transition: background-color 0.5s ease-in; /* so when the background color changes, it will fade in */
-	--primary-color: #000000;
+	--primary-color: #69468f;
 	--secondary-color: #ffffff;
-	--tertiary-color: rgba(255, 255, 255, 0.3);
-}
+	--tertiary-color: #38254d;
+	--past: #c2b069;
+	--past-text: #000000;
+	--present: #8f5fc2;
+	--present-text: #fff;
+	--future: #588f3f;
+	--future-text: #000000;
+	--clock-hour-hand: var(--secondary-color);
+	--clock-minute-hand: var(--secondary-color);
+	--clock-second-hand: red;
+	--clock-face: var(--tertiary-color);
 
-html.dark {
-	background-color: #111;
-	color: var(--primary-color);
-}
-main {
-	transition: background-color 0.5s ease-in; /* so when the background color changes, it will fade in */
 	background-color: var(--tertiary-color);
-	color: var(--primary-color);
-}
-main.dark {
-	transition: background-color 0.5s ease-in; /* so when the background color changes, it will fade in */
-	background-color: var(--tertiary-color);
-	color: var(--primary-color);
 }
 
 .toggle {

@@ -6,7 +6,16 @@
 
 Managers and engineers often struggle to organise their daily tasks. This app's design is geared towards a daily set of tasks. I wanted to create an app that dynamically updated HTML and CSS elements using jQuery and Bootstrap.
 
-While making this app, I learned about the importance of event delegation to make code look neater, as well as the convenience of client-side local storage.
+While making this app, I learned about the importance of event delegation to make code look neater, as well as the convenience of client-side local storage and server-side APIs.
+
+### Client-side APIs
+
+-  The app uses [moment.js](https://momentjs.com/) to get the current time and use this information to render a clock
+
+### Server-side APIs
+
+-  The app uses [ipregistry](https://ipregistry.co) to fetch the user's IP address via an API and uses this to read their location.
+-  The app uses this information to query [OpenWeather](https://openweathermap.org/api) and get local weather
 
 ## Usage
 
@@ -14,13 +23,19 @@ Deployed: [Work Day Scheduler](https://leoelicos.github.io/bcs-05-day-planner/).
 
 ## Screenshots
 
-### Splash Page
+### Light Mode
 
-![Screenshot of Page: Splash](./Screenshots/deployed.jpg)
+![Screenshot of Page: Splash](./Screenshots/light.jpg)
+
+### Dark Mode
+
+![Screenshot of Page: Splash](./Screenshots/dark.jpg)
 
 ## Credits
 
 -  BCS Resources
+-  [ipregistry](ipregistry.co)
+-  [OpenWeather](https://openweathermap.org/api)
 
 ## License
 

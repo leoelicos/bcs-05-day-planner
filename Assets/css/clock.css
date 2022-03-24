@@ -1,4 +1,4 @@
-/* to wrap around the clock elements */
+/* analog clock */
 .clock-container {
 	display: flex;
 	justify-content: center;
@@ -11,9 +11,8 @@
 	position: relative;
 	width: 14vh;
 	height: 14vh;
-	/* border: 1px dashed rgba(255,255,255,50%); */
 	border-radius: 50%;
-	background-color: rgba(255, 255, 255, 20%);
+	background-color: var(--clock-face);
 }
 
 .needle {
@@ -27,19 +26,20 @@
 }
 
 .needle.clock-hour {
-	background-color: white;
-	height: 3vmin;
-	transform: translate(-50%, -100%) rotate(0deg);
-}
-.needle.minute {
-	background-color: black;
 	height: 4vmin;
 	transform: translate(-50%, -100%) rotate(0deg);
+	background-color: var(--clock-hour-hand);
+}
+.needle.minute {
+	height: 6vmin;
+	transform: translate(-50%, -100%) rotate(0deg);
+	background-color: var(--clock-minute-hand);
 }
 .needle.second {
-	height: 5vmin;
+	height: 6.5vmin;
+	width: 1px;
 	transform: translate(-50%, -100%) rotate(0deg);
-	background-color: hsl(6, 79%, 57%);
+	background-color: var(--clock-second-hand);
 }
 
 .center-point {
@@ -65,28 +65,9 @@
 	border-radius: 50%; /* this will make it a circle */
 }
 
+/* digital clock */
 .time {
 	margin-left: 0.5vw;
 	font-size: calc(16px + 2vmin);
 	font-family: 'Montserrat', sans-serif;
-}
-
-.date {
-	color: hsl(0, 0%, 67%);
-	font-size: 14px;
-	letter-spacing: 0.3px;
-	text-transform: uppercase;
-}
-
-.date .circle {
-	background-color: var(--primary-color);
-	color: var(--secondary-color);
-	border-radius: 50%;
-	height: 18px;
-	width: 18px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	line-height: 18px;
-	font-size: 12px;
 }

@@ -41,6 +41,9 @@ main {
 	justify-content: center;
 	transform: translate3d(0, 0, 0);
 	z-index: 2; /*prevents clock from overlapping on screens with small height */
+	transition: background-color 0.5s ease-in; /* so when the background color changes, it will fade in */
+	background-color: var(--tertiary-color);
+	color: var(--primary-color);
 }
 
 footer {
@@ -83,12 +86,16 @@ i:focus-visible {
 }
 .date-container {
 	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: flex-end;
 }
 .currentDay {
 	font-size: calc(11px + 3vmin);
 }
 .currentMonthAndYear {
-	font-size: calc(5px + 1.5vmin);
+	font-size: calc(5px + 1vmin);
 	font-family: 'Poppins', sans-serif;
 	letter-spacing: 0.5vmin;
 	font-weight: bold;
@@ -101,29 +108,11 @@ i:focus-visible {
 }
 
 /*  right */
-#weather-container {
-	display: flex;
-	margin: 0;
-}
-#weather-temperature {
-	font-size: 1.5vmin;
-	font-weight: bold;
-	font-family: 'Poppins', sans-serif;
-	letter-spacing: 0.5vmin;
-}
 
-#weather-description {
-	white-space: wrap;
-}
 /* main */
 
 .description {
 	white-space: pre-wrap;
-}
-
-.time-block {
-	text-align: center;
-	border-radius: 15px;
 }
 
 article {
@@ -134,70 +123,4 @@ article {
 	display: flex;
 	justify-content: center;
 	align-items: stretch;
-}
-
-.past {
-	background-color: #d3d3d3;
-	color: white;
-}
-
-.present {
-	background-color: #ff6961;
-	color: white;
-}
-
-.future {
-	background-color: #77dd77;
-	color: white;
-}
-
-.timeblock-hour {
-	background-color: var(--primary-color);
-	color: var(--secondary-color);
-
-	border-top: 1px dashed var(---color);
-	width: 10vw;
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-end;
-	padding: 1vmin;
-	font-size: 2vmin;
-	font-family: 'Montserrat', sans-serif;
-}
-
-.timeblock-textarea {
-	flex: 1;
-	background-color: var(--secondary-color);
-	color: var(--primary-color);
-	border: none;
-	resize: none;
-	border-left: 1px solid var(--primary-color);
-	border-right: 1px solid var(--primary-color);
-	border-top: 1px solid var(--primary-color);
-	border-bottom: 1px solid var(--primary-color);
-	padding: 1vmin;
-	font-size: calc(12px + 1vmin);
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
-}
-.timeblock-textarea:focus-visible {
-	outline: none;
-}
-.timeblock-save {
-	border: none;
-	border-top-right-radius: 30%;
-	border-bottom-right-radius: 30%;
-	background-color: var(--primary-color);
-	color: var(--tertiary-color);
-
-	font-size: calc(16px + 2vmin);
-	width: calc(40px + 1vw);
-	position: relative;
-}
-
-.timeblock-save:hover i {
-	font-size: 4vmin;
-	color: var(--secondary-color);
-	transition: all 0.3s ease-in-out;
 }

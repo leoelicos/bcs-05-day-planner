@@ -6,11 +6,12 @@ $('#title').text(moment().format('dddd'));
 $('#currentDay').text(moment().format('dddd'));
 $('#currentMonthAndYear').text(moment().format('MMMM YYYY').toUpperCase());
 
+// these actions are performed every second
 setInterval(() => {
-	$('#currentDate').text(moment().format('D'));
-	$('#currentDay').text(moment().format('dddd'));
-	$('#currentMonthAndYear').text(moment().format('MMMM YYYY').toUpperCase());
-}, 1000); // update timer every second
+	$('#currentDate').text(moment().format('D')); // update header date
+	$('#currentDay').text(moment().format('dddd')); // update header day
+	$('#currentMonthAndYear').text(moment().format('MMMM YYYY').toUpperCase()); // update header month and year
+}, 1000);
 
 // this api gets location from IP
 fetch('https://api.ipregistry.co/?key=gcrxqclxi4uxdhh1')
@@ -42,45 +43,58 @@ fetch('https://api.ipregistry.co/?key=gcrxqclxi4uxdhh1')
 init();
 
 function init() {
-	// get container
+	// create timeblocks, render timeblock colors, render text content from local storage
 	var container = $('.container');
-	var textarea;
-	var icon;
-	var button;
 
-	// append timeblocks
+	// create timeblocks
 	for (var i = startDay; i <= finishDay; i++) {
-		article = $('<article>');
+		var article = $('<article>');
 		article.attr('id', `hour${i}`);
 
-		section = $('<section>');
+		var section = $('<section>');
 		section.addClass('timeblock-hour');
 		section.text(moment(i, 'H').format('h A'));
 		article.append(section);
 
-		textarea = $('<textarea>');
+		var textarea = $('<textarea>');
 		textarea.addClass('timeblock-textarea');
-		if (i < moment().hour()) {
-			textarea.addClass('past');
-		} else if (i == moment().hour()) {
-			textarea.addClass('present');
-		} else {
-			textarea.addClass('future');
-		}
 		article.append(textarea);
 
-		button = $('<button>');
+		var button = $('<button>');
 		button.addClass('timeblock-save');
 		button.attr('data-descr', '');
 		addSaveListener(button);
-		icon = $('<i>');
+
+		var icon = $('<i>');
 		icon.addClass('fa-solid fa-floppy-disk');
 		button.append(icon);
 		article.append(button);
 		// append event listener to button
 		container.append(article);
 	}
+	// render timeblock colors
+	pastPresentOrFuture(); // assign color according to whether textarea is past, present or future
+
+	// render text content from local storage
 	renderHours();
+}
+
+function pastPresentOrFuture() {
+	for (var i = startDay; i <= finishDay; i++) {
+		var timeblock = $(`#hour${i}`).children().eq(1);
+		// remove classes 'past', 'present', 'future'
+		timeblock.removeClass('past');
+		timeblock.removeClass('present');
+		timeblock.removeClass('future');
+		// add correct 'past', 'present', 'future
+		if (i < moment().hour()) {
+			timeblock.addClass('past');
+		} else if (i == moment().hour()) {
+			timeblock.addClass('present');
+		} else {
+			timeblock.addClass('future');
+		}
+	}
 }
 
 function addSaveListener(element) {
