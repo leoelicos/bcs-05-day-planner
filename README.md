@@ -4,13 +4,14 @@
 
 ## Introduction
 
-Managers and engineers often struggle to organise their daily tasks. This app's design is geared towards a daily set of tasks. I wanted to create an app that dynamically updated HTML and CSS elements using jQuery and Bootstrap.
+Managers and engineers often struggle to organise their daily tasks. This app's design is geared towards a daily set of tasks. I wanted to create an app that dynamically updated HTML and CSS elements using jQuery.
 
 While making this app, I learned about the importance of event delegation to make code look neater, as well as the convenience of client-side local storage and server-side APIs.
 
-### Client-side APIs
+### Third-Party APIs
 
 -  The app uses [moment.js](https://momentjs.com/) to get the current time and use this information to render a clock
+-  The app uses [jQuery UI Autocomplete](https://jqueryui.com/autocomplete/) to suggest a list of [business vocabulary from Indeed.com](https://www.indeed.com/career-advice/career-development/business-vocabulary)
 
 ### Server-side APIs
 
@@ -25,7 +26,7 @@ Deployed: [Work Day Scheduler](https://leoelicos.github.io/bcs-05-day-planner/).
 
 ### Light Mode
 
-![Screenshot of Page: Splash](./Screenshots/light.png)
+![Screenshot of Page: Splash](./Screenshots/light.jpg)
 
 ### Dark Mode
 
